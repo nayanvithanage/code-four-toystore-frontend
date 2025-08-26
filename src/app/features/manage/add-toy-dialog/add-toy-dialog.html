@@ -1,0 +1,19 @@
+<div class="dialog-div">
+<h2 mat-dialog-title>Add New Toy</h2>
+
+<form (ngSubmit)="submit()" #addToyForm="ngForm" class="add-toy-form">
+    <mat-form-field>
+    <input matInput placeholder="Name" name="name" [(ngModel)]="toy.name" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Type" name="type" [(ngModel)]="toy.type" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="number" placeholder="Price" name="price" [(ngModel)]="toy.price" required>
+  </mat-form-field>
+  <div class="dialog-actions">
+    <button mat-raised-button color="primary" type="submit">Add</button>
+    <button mat-button type="button" (click)="cancel()">Cancel</button>
+  </div>
+</form>
+</div>

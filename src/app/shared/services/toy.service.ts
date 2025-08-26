@@ -14,4 +14,16 @@ export class ToyService {
   getToys(): Observable<Toy[]> {
     return this.http.get<Toy[]>(this.apiUrl);
   }
+
+  addToy(toy: Omit<Toy, 'id'>): Observable<Toy> {
+    return this.http.post<Toy>(this.apiUrl, toy);
+  }
+
+  updateToy(toy: Toy): Observable<Toy> {
+    return this.http.put<Toy>(`${this.apiUrl}/${toy.id}`, toy);
+  }
+
+  deleteToy(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/${id}`);
+  }
 }
