@@ -1,0 +1,14 @@
+.add-toy-form {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.add-toy-form .mat-form-field {
+  width: 180px;
+}
+
+.add-toy-form button {
+  height: 40px;
+}
